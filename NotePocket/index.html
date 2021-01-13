@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title> NotePocket </title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="container">
+         <div class="left-element">
+            <h1>Notes</h1>
+            <form class="form" id="noteForm">
+                <label class="form-label">Podaj tytuł</label>
+                <input type="text" id="note-title">
+                <div class="form-row">
+                    <label class="form-label" for="todoMessage">Podaj treść</label>
+                    <textarea class="form-massage" name="todoMessage" id="todoMessage"></textarea>
+                    <br> Wybierz priorytet
+
+                    <select id="mySelect">
+                        <option value="red">Wysoki</option>
+                        <option value="yellow">Sredni</option>
+                        <option value="green">Niski</option>
+                    </select>
+                    <div id="result"></div>
+                </div>
+                </textarea>
+                <div>
+                    <button type="submit" class="button form-button">Dodaj</button>
+                </div>
+            </form>
+
+        </div>
+        <div class="right-element">
+            <div class="container pined">                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" id="todoList">
+        <!-- tutaj trafią zadania -->
+    </div>
+
+    <template id="elementTemplate">
+        <div class="element-bar">
+            <h2 class="element-title"></h2>
+            <h3 class="element-date"></h3>
+            <h3 class="element-text">
+            </h3>
+     
+            <button id="delete-button" class="button form-button" title="Usuń task">
+                Usuń
+            </button>
+        </div>
+
+    </template>
+
+</body>
+
+
+<script type="text/javascript" src="main.js"></script>
+
+
+
+
+
+</html>

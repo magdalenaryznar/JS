@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drumkit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>Channel 1</th>
+      <th>Channel 2</th>
+      <th>Channel 3</th>
+    </tr>
+    <tr>
+      <td>
+        <audio src="sounds/boom.wav" onplaying="recordChannel1(this)" controls id="boom"></audio>
+      </td>
+      <td>
+        <audio src="sounds/clap.wav" onplaying="recordChannel2(this)" controls id="clap"></audio>
+      </td>
+      <td>
+        <audio src="sounds/hihat.wav" onplaying="recordChannel3(this)" controls id="hihat"></audio>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <audio src="sounds/kick.wav" onplaying="recordChannel1(this)" controls id="kick"></audio>
+      </td>
+      <td>
+        <audio src="sounds/openhat.wav" onplaying="recordChannel2(this)" controls id="openhat"></audio>
+      </td>
+      <td>
+        <audio src="sounds/ride.wav" onplaying="recordChannel2(this)" controls></audio>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <audio src="sounds/snare.wav" onplaying="recordChannel1(this)" controls id="snare"></audio>
+        <br>
+        <button class="playBtn" onclick="playChannel(1)">Odtworz</button>
+      </td>
+      <td>
+        <audio src="sounds/tink.wav" onplaying="recordChannel2(this)" controls id="tink"></audio>
+        <br>
+        <button class="playBtn" onclick="playChannel(2)">Odtworz</button>
+      </td>
+
+      <td>
+        <audio src="sounds/tom.wav" onplaying="recordChannel2(this)" controls id="tom"></audio>
+        <br>
+        <button class="playBtn" onclick="playChannel(3)">Odtworz</button>
+      </td>
+    </tr>
+  </table>
+
+
+
+
+  <button id="playAllBtn" style="margin-top: 50px;">Odtworz wszystkie</button>
+
+  <script src="main.js" type="text/javascript"></script>
+  <div id="images">
+    <img id="drum" src="images/another_drum.jpg" width="200" style="display: none;" />
+    <img id="plate" src="images/plate.jpg" width="200" style="display: none;" />
+    <img id="bigdrum" src="images/big_drum.png" width="200" style="display: none;" />
+    <img id="kicked" src="images/drums.jpg" width="200" style="display: none;" />
+  </div>
+</body>
+
+</html>
