@@ -65,17 +65,12 @@ function addNote(dateTime, title, text, color) {
         element.classList.add("right-element");
 
     }
-    element.setAttribute("data-id", dateTime);
 
-    //pobieram zawartość templatki
+
     const elementInner = document.querySelector("#elementTemplate").content.cloneNode(true);
 
-
-    //wrzucam do elementu
     element.append(elementInner);
 
-
-    // ustawiam tytuł
     element.querySelector('.element-title').innerText = title;
 
     const date = new Date();
@@ -84,10 +79,8 @@ function addNote(dateTime, title, text, color) {
     const dateText = `${date.getDate()} - ${date.getMonth() + 1} - ${date.getFullYear()} godz.: ${date.getHours()}:${date.getMinutes()}`;
     element.querySelector(".element-date").innerText = dateText;
 
-    //wstawiam tekst
     element.querySelector(".element-text").innerText = text;
 
-    //i wrzucam element do listy
     todoList.append(element);
 
 
@@ -106,53 +99,6 @@ function addNote(dateTime, title, text, color) {
     })
 }
 
-function addPinedNote(dateTime, title, text, color) {
-    const pined = document.querySelector(".pined");
-    const element = document.createElement("div");
-
-    element.classList.add("right-element");
-
-
-    element.setAttribute("data-id", dateTime);
-
-    //pobieram zawartość templatki
-    const elementInner = document.querySelector("#elementTemplate").content.cloneNode(true);
-
-
-    //wrzucam do elementu
-    element.append(elementInner);
-
-
-    // ustawiam tytuł
-    element.querySelector('.element-title').innerText = title;
-
-    const date = new Date();
-    date.setTime(dateTime);
-
-    const dateText = `${date.getDate()} - ${date.getMonth() + 1} - ${date.getFullYear()} godz.: ${date.getHours()}:${date.getMinutes()}`;
-    element.querySelector(".element-date").innerText = dateText;
-
-    //wstawiam tekst
-    element.querySelector(".element-text").innerText = text;
-
-    //i wrzucam element do listy
-    pined.append(element);
-
-
-    if (color === "green") {
-        element.querySelector(".element-bar").style.backgroundColor = "green";
-    }
-    if (color === "yellow") {
-        element.querySelector(".element-bar").style.backgroundColor = "darkgoldenrod";
-    }
-    if (color === "red") {
-        element.querySelector(".element-bar").style.backgroundColor = "red";
-    }
-
-    element.querySelector("button").addEventListener("click", function(event) {
-        deleteNote(date.getTime());
-    })
-}
 
 function deleteNote(id) {
     window.localStorage.removeItem(id);

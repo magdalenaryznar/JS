@@ -5,18 +5,12 @@
     margin-right: auto;
 }
 
-.add-weather{
+.add-weather {
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
     color: #fff;
-    box-shadow: 10px 10px 10px 10px rgba(0,0,0, 0.1);
-}
- 
-.button{
-   
-   
- 
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-message {
@@ -37,14 +31,15 @@
     border-radius: 0.188rem;
     transition: 0.4s all;
     cursor: pointer;
- }
+}
 
- input {
+input {
     padding: 0.8rem 1.6rem;
-    border: 1px solid  rgb(180, 149, 120);;
+    border: 1px solid rgb(180, 149, 120);
+    ;
     border-radius: 0.188rem;
     transition: 0.4s all;
- }
+}
 
 .form-button:hover {
     background: rgb(135, 184, 240);
@@ -93,7 +88,6 @@ element {
     width: 200px;
 }
 
- 
 .element-date {
     margin: 0;
 }
@@ -107,8 +101,7 @@ element {
     border: 0;
     float: right;
     cursor: pointer;
- 
- }
+}
 
 .element-text {
     color: rgb(0, 0, 0);
@@ -116,8 +109,8 @@ element {
 }
 
 .container {
-    position: absolute; 
- }
+    position: absolute;
+}
 
 .left-element {
     margin: 50px;
@@ -131,12 +124,10 @@ element {
     float: left;
 }
 
- 
-#cities{
+#cities {
     margin-top: 100px;
 }
 
- 
 span {
     font-weight: bold;
 }

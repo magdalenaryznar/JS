@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     var garden = document.querySelector('.garden');
 
     const playing = true;
- 
-    const startDate =  Date.now(); 
+
+    const startDate = Date.now();
     var ball = document.querySelector('.ball');
 
     var maxX = garden.clientWidth - ball.clientWidth;
@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
     var randomY = getRandomInt(0, maxY);
 
     const hall = document.getElementById("holeTemplate").content.cloneNode(true);
-
-
 
     const hole = hall.querySelector(".hole");
 
@@ -28,9 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
         var x = event.beta;
         var y = event.gamma;
 
-
-
-
         if (x > 180) { x = 180 };
         if (x < -180) { x = -180 };
 
@@ -44,19 +39,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const rectBall = ball.getBoundingClientRect();
 
-
         const rectHole = hole.getBoundingClientRect();
 
-
         const currentDate = (Date.now() - startDate) / 1000;
-       
 
- 
-        if (rectBall.top + rectBall.height > rectHole.top
-            && rectBall.left + rectBall.width > rectHole.left
-            && rectBall.bottom - rectBall.height < rectHole.bottom
-            && rectBall.right - rectBall.width < rectHole.right) {
-          
+
+        if (rectBall.top + rectBall.height > rectHole.top &&
+            rectBall.left + rectBall.width > rectHole.left &&
+            rectBall.bottom - rectBall.height < rectHole.bottom &&
+            rectBall.right - rectBall.width < rectHole.right) {
+
             if (playing) {
                 alert("You win! In " + currentDate + " seconds")
                 playing = false;
