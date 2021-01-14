@@ -11,19 +11,16 @@ function onKeyPress(ev) {
 
     switch (ev.code) {
         case 'KeyA':
-
             sound = document.querySelector('#boom');
             channel1.push(sound);
             show('drum');
             break;
         case 'KeyS':
-
             sound = document.querySelector('#clap');
             channel2.push(sound);
             show('plate');
             break;
         case 'KeyD':
-
             sound = document.querySelector('#hihat');
             channel3.push(sound);
             show('bigdrum');
