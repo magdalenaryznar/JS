@@ -1,0 +1,150 @@
+.container {
+    margin-top: 0;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.add-weather{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    color: #fff;
+    box-shadow: 10px 10px 10px 10px rgba(0,0,0, 0.1);
+}
+ 
+.button{
+   
+   
+ 
+}
+
+.form-message {
+    padding: 1rem;
+    height: 10rem;
+    width: 100%;
+    border: 1px solid #aaa;
+    margin-bottom: 0.5rem;
+    resize: vertical;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.form-button {
+    padding: 0.8rem 1.6rem;
+    background: rgb(180, 149, 120);
+    color: #fff;
+    border: 0;
+    border-radius: 0.188rem;
+    transition: 0.4s all;
+    cursor: pointer;
+ }
+
+ input {
+    padding: 0.8rem 1.6rem;
+    border: 1px solid  rgb(180, 149, 120);;
+    border-radius: 0.188rem;
+    transition: 0.4s all;
+ }
+
+.form-button:hover {
+    background: rgb(135, 184, 240);
+}
+
+.list-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-search-form {
+    width: 50%;
+}
+
+.list-search {
+    border: 1px solid #aaa;
+    padding: 0.7rem;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.list-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+element {
+    border-top: 1px solid ghostwhite;
+    margin-top: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.element-bar {
+    padding: 2rem;
+    background-color: aliceblue;
+    border: 1px solid grey;
+    overflow: hidden;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    width: 200px;
+}
+
+ 
+.element-date {
+    margin: 0;
+}
+
+.element-date {
+    font-size: 0.9rem;
+    font-weight: normal;
+}
+
+.element-delete {
+    border: 0;
+    float: right;
+    cursor: pointer;
+ 
+ }
+
+.element-text {
+    color: rgb(0, 0, 0);
+    font-size: 3;
+}
+
+.container {
+    position: absolute; 
+ }
+
+.left-element {
+    margin: 50px;
+    display: inline-block;
+    float: left;
+}
+
+.right-element {
+    margin: 50px;
+    display: inline-block;
+    float: left;
+}
+
+ 
+#cities{
+    margin-top: 100px;
+}
+
+ 
+span {
+    font-weight: bold;
+}
+
+.element-bar img {
+    margin-left: 40px;
+}
+
+.element-bar h1 {
+    margin-left: 40px;
+}

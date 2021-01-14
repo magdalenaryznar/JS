@@ -1,4 +1,3 @@
-
 document.body.addEventListener('keypress', onKeyPress);
 document.getElementById("playAllBtn").addEventListener("click", playAll);
 const channel1 = [];
@@ -9,28 +8,28 @@ const recordStart = Date.now();
 
 function onKeyPress(ev) {
     let sound;
-    let soundName;
+
     switch (ev.code) {
         case 'KeyA':
-            soundName = 'boom';
+
             sound = document.querySelector('#boom');
             channel1.push(sound);
             show('drum');
             break;
         case 'KeyS':
-            soundName = 'clap';
+
             sound = document.querySelector('#clap');
             channel2.push(sound);
             show('plate');
             break;
         case 'KeyD':
-            soundName = 'hihat';
+
             sound = document.querySelector('#hihat');
             channel3.push(sound);
             show('bigdrum');
             break;
         case 'KeyF':
-            soundName = 'kick';
+
             sound = document.querySelector('#kick');
             channel1.push(sound);
             show('kicked');
@@ -71,7 +70,7 @@ function show(icon) {
     let element = document.getElementById(icon);
     element.style.display = 'block';
 
-    setTimeout(function () {
+    setTimeout(function() {
         element.style.display = 'none';
     }, 300);
 }

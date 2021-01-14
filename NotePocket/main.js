@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const todoList = document.querySelector("#todoList");
     const todoForm = document.querySelector("#noteForm");
-    const todoSearch = document.querySelector("#todoSearch");
     const todoTextarea = todoForm.querySelector('textarea');
 
     todoForm.addEventListener("submit", e => {
@@ -62,8 +61,7 @@ function addNote(dateTime, title, text, color) {
     const element = document.createElement("div");
     if (todoList.children.length === 0) {
         element.classList.add("left-element");
-    }
-    else {
+    } else {
         element.classList.add("right-element");
 
     }
@@ -103,7 +101,7 @@ function addNote(dateTime, title, text, color) {
         element.querySelector(".element-bar").style.backgroundColor = "red";
     }
 
-    element.querySelector("#delete-button").addEventListener("click", function (event) {
+    element.querySelector("#delete-button").addEventListener("click", function(event) {
         deleteNote(date.getTime());
     })
 }
@@ -151,7 +149,7 @@ function addPinedNote(dateTime, title, text, color) {
         element.querySelector(".element-bar").style.backgroundColor = "red";
     }
 
-    element.querySelector("button").addEventListener("click", function (event) {
+    element.querySelector("button").addEventListener("click", function(event) {
         deleteNote(date.getTime());
     })
 }
