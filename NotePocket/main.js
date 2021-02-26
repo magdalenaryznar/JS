@@ -3,6 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const todoForm = document.querySelector("#noteForm");
     const todoTextarea = todoForm.querySelector('textarea');
 
+    const clearButton = document.getElementById('clear');
+    clearButton.addEventListener("click", () => {
+        window.localStorage.clear();
+        window.location.reload();
+    })
+
     todoForm.addEventListener("submit", e => {
         e.preventDefault();
 
@@ -31,6 +37,7 @@ function loadNotes() {
             }
         }
     }
+
 }
 
 function addTask(text) {
@@ -99,6 +106,13 @@ function addNote(dateTime, title, text, color) {
     })
 }
 
+function parzyste(zakres) {
+    for (let i = 0; i < zakres; i++) {
+        if (i % 2 == 0) {
+            console.log(i)
+        }
+    }
+}
 
 function deleteNote(id) {
     window.localStorage.removeItem(id);

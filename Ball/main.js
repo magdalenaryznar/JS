@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     var garden = document.querySelector('.garden');
 
-    const playing = true;
+    let playing = true;
 
     const startDate = Date.now();
     var ball = document.querySelector('.ball');
